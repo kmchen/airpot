@@ -3,7 +3,6 @@ var mongoose  = require('mongoose');
 var Schema    = mongoose.Schema;
 
 var ReviewSchema = new Schema({
-  name: String,
   airport_name: String,
   link: String,
   title: String,
