@@ -57,10 +57,12 @@ router.route('/:airport/stats')
                     avg_overall_rating: 1,
                     recommended_cnt: 1,
                     review_cnt : 1 }}],
-      function(err, result) {
+      function(err, results) {
         if (err)
           console.error('Fail to query /api/'+ req.params.airpot+'/stats', err);
-        res.json(result);
+        var r = results[0]
+        r.avg_overall_rating = r.avg_overall_rating.toFixed(2)
+        res.json(r);
       }
     );
   });
