@@ -1,0 +1,7 @@
+# INSTALLATION
+--------------
+npm install
+
+# IMPORT DB
+-----------
+/mongoimport -d airport -c review --type csv --file ../../../data/airport.csv --headerline
