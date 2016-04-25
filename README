@@ -1,13 +1,5 @@
-# INSTALLATION
---------------
-npm install
-
-# IMPORT DB
------------
-/mongoimport -d airport -c review --type csv --file ../../../data/airport.csv --headerline
-
-# Docker run web server
------------------------
+Docker run web server
+=====================
 docker run -i -t -p 8080:8080  kmchen/task-server /bin/bash
 
 # Docker on Mac
