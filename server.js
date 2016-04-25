@@ -1,7 +1,6 @@
 var express    = require('express')
 var mongoose   = require('mongoose');
 
-var Review    = require('./app/models/reviews');
 var Constant  = require('./app/constant');
 var Router  = require('./app/router');
 

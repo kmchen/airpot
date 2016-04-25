@@ -1,4 +1,6 @@
-var express    = require('express');
+var express = require('express');
+var Review  = require('./models/reviews');
+var Query   = require('./query');
 
 var Router = express.Router();
 
@@ -11,10 +13,6 @@ Router.route('/all/stats')
     Review.aggregate([
       {$group: {_id: "$airport_name", review_count: {$sum: 1}}},
       {$project : { _id : 0 , airport_name: "$_id" , review_count : 1 }}],
-      // Sorting pipeline
-      //{ "$sort": { "airport_name": -1 } },
-      // Optionally limit results
-      //{ "$limit": 5 }
       function(err, result) {
         if (err)
           console.error('Fail to query /api/all/stats', err)
