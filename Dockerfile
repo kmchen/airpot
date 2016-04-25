@@ -5,13 +5,11 @@ MAINTAINER Kuang-Ming Chen <kuangmingchen0702@gmail.com>
 # Install Git
 RUN apt-get update && apt-get install -y git
 
-# Pull code from github
+# Pull code from github and run npm install
 RUN git clone https://github.com/kmchen/airpot.git && \
-    cd /airpot
-
-# Install app dependencies
-RUN npm install
+    cd /airpot && \
+    npm install
 
 EXPOSE 8080
+
 CMD [ "npm", "start" ]
-#CMD ["bash"]
