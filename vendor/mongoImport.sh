@@ -5,8 +5,8 @@ for i in {1..10}
 do
   if ps ax | grep -v grep | grep $SERVICE > /dev/null
   then
-    echo "$SERVICE service running, everything is fine"
-    exit;
+    echo "$SERVICE service is up and running"
+    /usr/bin/mongoimport -d airport -c review --type csv --file /airport.csv --headerline && exit
   else
     echo "$SERVICE is not running"
     sleep 2
