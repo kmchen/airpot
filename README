@@ -5,3 +5,11 @@ npm install
 # IMPORT DB
 -----------
 /mongoimport -d airport -c review --type csv --file ../../../data/airport.csv --headerline
+
+# Docker on Mac
+------------------
+docker-machine start default                                           
+eval "$(docker-machine env default)"
+
+# Running mongo client
+./mongo --port 27017 --host 192.168.99.100

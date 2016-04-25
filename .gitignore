@@ -1,0 +1,10 @@
+.DS_Store
+
+# Logs
+data
+*.log
+
+# Dependency directories
+node_modules
+
+access_logs.db
