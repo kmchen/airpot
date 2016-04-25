@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "test": "mocha --compilers js:babel-core/register --recursive",
-    "test:watch": "npm run test -- --watch"
+    "start": "node server.js",
+    "test": "mocha --compilers js:babel-core/register --recursive"
   },
   "keywords": [],
   "author": "",

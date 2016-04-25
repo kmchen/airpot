@@ -6,10 +6,19 @@ npm install
 -----------
 /mongoimport -d airport -c review --type csv --file ../../../data/airport.csv --headerline
 
+# Docker run web server
+-----------------------
+docker run -i -t -p 8080:8080  kmchen/task-server /bin/bash
+
 # Docker on Mac
 ------------------
 docker-machine start default                                           
 eval "$(docker-machine env default)"
 
+# Running mongo server
+----------------------
+docker run -p 27017:27017 --name mongo_instance_001 -d kmchen/mongodb
+
 # Running mongo client
+--------------------
 ./mongo --port 27017 --host 192.168.99.100
